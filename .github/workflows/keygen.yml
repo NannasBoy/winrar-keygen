@@ -1,4 +1,4 @@
-name: WinRAR Keygen
+name: WinRAR Keygen          
 on: 
   workflow_dispatch:
     inputs:
@@ -10,19 +10,19 @@ on:
 
       KEY_USERNAME:
         type: string
-        description: Input your username
+        description: NannasBoy
         required: true
         
       KEY_LICENSE_NAME:
         type: string
-        description: Input your license name
+        description: NannasBoy
         default: 'Single PC usage license'
         required: true
 
 jobs:
   keygen-ascii:
     name: Generating ASCII License
-    runs-on: windows-2022
+    runs-on: windows-2025
     env:
       KEY_ENCODING: ${{ github.event.inputs.KEY_ENCODING }}
       KEY_USERNAME: ${{ github.event.inputs.KEY_USERNAME }}
@@ -51,7 +51,7 @@ jobs:
 
   keygen-ansi:
     name: Generating ANSI License
-    runs-on: windows-2022
+    runs-on: windows-2025
     env:
       KEY_ENCODING: ${{ github.event.inputs.KEY_ENCODING }}
       KEY_USERNAME: ${{ github.event.inputs.KEY_USERNAME }}
@@ -80,7 +80,7 @@ jobs:
 
   keygen-uft8:
     name: Generating UTF8 License
-    runs-on: windows-2022
+    runs-on: windows-2025
     env:
       KEY_ENCODING: ${{ github.event.inputs.KEY_ENCODING }}
       KEY_USERNAME: ${{ github.event.inputs.KEY_USERNAME }}
